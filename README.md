@@ -1,4 +1,4 @@
-/assets/banner.png
+/assets/banner.png:
 
 <div align="center"> ⭐ GitHub Stars &nbsp;&nbsp;•&nbsp;&nbsp;📄 License: MIT &nbsp;&nbsp;•&nbsp;&nbsp;💬 <a href="#">Discord</a> &nbsp;&nbsp;•&nbsp;&nbsp;🐦 <a href="#">Follow</a> &nbsp;&nbsp;•&nbsp;&nbsp;🎥 <a href="#">Demo</a> </div>
 👋 Welcome to ozManus
