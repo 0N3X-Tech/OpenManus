@@ -1,7 +1,7 @@
 ![banner](https://github.com/user-attachments/assets/9ebbbfa2-3ee8-4e87-a32e-ae441bf339ac)
 
 
-<div align="center"> ⭐ GitHub Stars &nbsp;&nbsp;•&nbsp;&nbsp;📄 License: MIT &nbsp;&nbsp;•&nbsp;&nbsp;💬 <a href="#">Discord</a> &nbsp;&nbsp;•&nbsp;&nbsp;🐦 <a href="#">Follow</a> &nbsp;&nbsp;•&nbsp;&nbsp;🎥 <a href="#">Demo</a> </div>
+
 👋 Welcome to ozManus
 ozManus is a community-driven fork of OpenManus — an intelligent autonomous agent framework originally created by the MetaGPT team. While OpenManus opened the gates to agentic creativity, ozManus removes all barriers to entry and supercharges the vision.
 
