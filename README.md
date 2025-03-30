@@ -1,179 +1,145 @@
-<p align="center">
-  <img src="assets/logo.jpg" width="200"/>
-</p>
+/assets/banner.png
 
-English | [中文](README_zh.md) | [한국어](README_ko.md) | [日本語](README_ja.md)
+<div align="center"> ⭐ GitHub Stars &nbsp;&nbsp;•&nbsp;&nbsp;📄 License: MIT &nbsp;&nbsp;•&nbsp;&nbsp;💬 <a href="#">Discord</a> &nbsp;&nbsp;•&nbsp;&nbsp;🐦 <a href="#">Follow</a> &nbsp;&nbsp;•&nbsp;&nbsp;🎥 <a href="#">Demo</a> </div>
+👋 Welcome to ozManus
+ozManus is a community-driven fork of OpenManus — an intelligent autonomous agent framework originally created by the MetaGPT team. While OpenManus opened the gates to agentic creativity, ozManus removes all barriers to entry and supercharges the vision.
 
-[![GitHub stars](https://img.shields.io/github/stars/mannaandpoem/OpenManus?style=social)](https://github.com/mannaandpoem/OpenManus/stargazers)
-&ensp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &ensp;
-[![Discord Follow](https://dcbadge.vercel.app/api/server/DYn29wFk9z?style=flat)](https://discord.gg/DYn29wFk9z)
-[![Demo](https://img.shields.io/badge/Demo-Hugging%20Face-yellow)](https://huggingface.co/spaces/lyh-917/OpenManusDemo)
+Whether you're exploring LLMs, building multi-agent workflows, or just curious about AI automation — ozManus is your sandbox.
 
-# 👋 OpenManus
+✨ Why ozManus?
+🚪 No Invite Code Required – ozManus is open to everyone.
 
-Manus is incredible, but OpenManus can achieve any idea without an *Invite Code* 🛫!
+🔄 Forked & Upgraded – Based on OpenManus, now with improvements for accessibility, developer experience, and experimentation.
 
-Our team members [@Xinbin Liang](https://github.com/mannaandpoem) and [@Jinyu Xiang](https://github.com/XiangJinyu) (core authors), along with [@Zhaoyang Yu](https://github.com/MoshiQAQ), [@Jiayi Zhang](https://github.com/didiforgithub), and [@Sirui Hong](https://github.com/stellaHSR), we are from [@MetaGPT](https://github.com/geekan/MetaGPT). The prototype is launched within 3 hours and we are keeping building!
+🧠 LLM Agent Framework – Build and run ideas through powerful language models.
 
-It's a simple implementation, so we welcome any suggestions, contributions, and feedback!
+🌏 Born in Australia – Forked with love and built for openness, transparency, and limitless potential.
 
-Enjoy your own agent with OpenManus!
+🚀 Getting Started
+🛠 Prerequisites
+Python 3.12
 
-We're also excited to introduce [OpenManus-RL](https://github.com/OpenManus/OpenManus-RL), an open-source project dedicated to reinforcement learning (RL)- based (such as GRPO) tuning methods for LLM agents, developed collaboratively by researchers from UIUC and OpenManus.
+uv or conda
 
-## Project Demo
+An OpenAI API Key (or other LLM provider)
 
-<video src="https://private-user-images.githubusercontent.com/61239030/420168772-6dcfd0d2-9142-45d9-b74e-d10aa75073c6.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEzMTgwNTksIm5iZiI6MTc0MTMxNzc1OSwicGF0aCI6Ii82MTIzOTAzMC80MjAxNjg3NzItNmRjZmQwZDItOTE0Mi00NWQ5LWI3NGUtZDEwYWE3NTA3M2M2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA3VDAzMjIzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdiZjFkNjlmYWNjMmEzOTliM2Y3M2VlYjgyNDRlZDJmOWE3NWZhZjE1MzhiZWY4YmQ3NjdkNTYwYTU5ZDA2MzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UuHQCgWYkh0OQq9qsUWqGsUbhG3i9jcZDAMeHjLt5T4" data-canonical-src="https://private-user-images.githubusercontent.com/61239030/420168772-6dcfd0d2-9142-45d9-b74e-d10aa75073c6.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEzMTgwNTksIm5iZiI6MTc0MTMxNzc1OSwicGF0aCI6Ii82MTIzOTAzMC80MjAxNjg3NzItNmRjZmQwZDItOTE0Mi00NWQ5LWI3NGUtZDEwYWE3NTA3M2M2Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA3VDAzMjIzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdiZjFkNjlmYWNjMmEzOTliM2Y3M2VlYjgyNDRlZDJmOWE3NWZhZjE1MzhiZWY4YmQ3NjdkNTYwYTU5ZDA2MzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.UuHQCgWYkh0OQq9qsUWqGsUbhG3i9jcZDAMeHjLt5T4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px"></video>
+⚙️ Installation
+You can install ozManus via two different methods:
 
-## Installation
-
-We provide two installation methods. Method 2 (using uv) is recommended for faster installation and better dependency management.
-
-### Method 1: Using conda
-
-1. Create a new conda environment:
-
-```bash
-conda create -n open_manus python=3.12
-conda activate open_manus
-```
-
-2. Clone the repository:
-
-```bash
-git clone https://github.com/mannaandpoem/OpenManus.git
-cd OpenManus
-```
-
-3. Install dependencies:
-
-```bash
+✅ Method 1: Using Conda
+bash
+Copy
+Edit
+conda create -n oz_manus python=3.12
+conda activate oz_manus
+git clone https://github.com/YOUR-USERNAME/ozManus.git
+cd ozManus
 pip install -r requirements.txt
-```
 
-### Method 2: Using uv (Recommended)
-
-1. Install uv (A fast Python package installer and resolver):
-
-```bash
+🚀 Method 2: Using uv (Recommended)
+bash
+Copy
+Edit
 curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-2. Clone the repository:
-
-```bash
-git clone https://github.com/mannaandpoem/OpenManus.git
-cd OpenManus
-```
-
-3. Create a new virtual environment and activate it:
-
-```bash
+git clone https://github.com/YOUR-USERNAME/ozManus.git
+cd ozManus
 uv venv --python 3.12
-source .venv/bin/activate  # On Unix/macOS
+source .venv/bin/activate  # For Unix/macOS
 # Or on Windows:
 # .venv\Scripts\activate
-```
-
-4. Install dependencies:
-
-```bash
 uv pip install -r requirements.txt
-```
-
-### Browser Automation Tool (Optional)
-```bash
+🔍 (Optional) Install browser automation tools:
+bash
+Copy
+Edit
 playwright install
-```
 
-## Configuration
+🧩 Configuration
+ozManus requires configuration to connect to LLM providers such as OpenAI.
 
-OpenManus requires configuration for the LLM APIs it uses. Follow these steps to set up your configuration:
-
-1. Create a `config.toml` file in the `config` directory (you can copy from the example):
-
-```bash
+Step 1: Copy the example config file
+bash
+Copy
+Edit
 cp config/config.example.toml config/config.toml
-```
-
-2. Edit `config/config.toml` to add your API keys and customize settings:
-
-```toml
-# Global LLM configuration
+Step 2: Edit your API keys and model preferences
+toml
+Copy
+Edit
 [llm]
 model = "gpt-4o"
 base_url = "https://api.openai.com/v1"
-api_key = "sk-..."  # Replace with your actual API key
+api_key = "sk-..."  # Your API key here
 max_tokens = 4096
 temperature = 0.0
 
-# Optional configuration for specific LLM models
 [llm.vision]
 model = "gpt-4o"
 base_url = "https://api.openai.com/v1"
-api_key = "sk-..."  # Replace with your actual API key
-```
+api_key = "sk-..."
+You can customize your models, temperature, and other parameters as needed.
 
-## Quick Start
+⚡ Usage
+Once set up, you can launch ozManus in multiple ways depending on your use case.
 
-One line for run OpenManus:
+✨ Quick Start
+Run your own autonomous LLM agent:
 
-```bash
+bash
+Copy
+Edit
 python main.py
-```
-
-Then input your idea via terminal!
-
-For MCP tool version, you can run:
-```bash
+🧠 Run Multi-Agent MCP Tool
+bash
+Copy
+Edit
 python run_mcp.py
-```
-
-For unstable multi-agent version, you also can run:
-
-```bash
+🧪 Experimental Multi-Agent Flow (Unstable)
+bash
+Copy
+Edit
 python run_flow.py
-```
 
-## How to contribute
+🧠 About ozManus
+ozManus builds upon OpenManus by @Xinbin Liang and @Jinyu Xiang, with contributions from @Zhaoyang Yu, @Jiayi Zhang, and @Sirui Hong — all part of the MetaGPT team.
 
-We welcome any friendly suggestions and helpful contributions! Just create issues or submit pull requests.
+The goal of ozManus is to provide:
 
-Or contact @mannaandpoem via 📧email: mannaandpoem@gmail.com
+A fully open-source LLM agent platform
 
-**Note**: Before submitting a pull request, please use the pre-commit tool to check your changes. Run `pre-commit run --all-files` to execute the checks.
+Easier developer onboarding
 
-## Community Group
-Join our networking group on Feishu and share your experience with other developers!
+Community-driven features and experiments
 
-<div align="center" style="display: flex; gap: 20px;">
-    <img src="assets/community_group.jpg" alt="OpenManus 交流群" width="300" />
-</div>
+A home for experimentation in reinforcement learning tuning for LLMs
 
-## Star History
+We also support ozManus-RL, an advanced research project exploring RL fine-tuning (e.g., GRPO) for agent behaviors. This work is inspired by collaborations between researchers from UIUC and OpenManus.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mannaandpoem/OpenManus&type=Date)](https://star-history.com/#mannaandpoem/OpenManus&Date)
+🤝 Contributing
+We welcome your ideas, questions, and pull requests! Here’s how to get involved:
 
-## Acknowledgement
+🧰 Pre-commit Hook
+Please run the following before submitting a PR:
 
-Thanks to [anthropic-computer-use](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo)
-and [browser-use](https://github.com/browser-use/browser-use) for providing basic support for this project!
+bash
+Copy
+Edit
+pre-commit run --all-files
+📮 Contact
+Have questions or proposals? Email us directly:
+📧 mannaandpoem@gmail.com
 
-Additionally, we are grateful to [AAAJ](https://github.com/metauto-ai/agent-as-a-judge), [MetaGPT](https://github.com/geekan/MetaGPT), [OpenHands](https://github.com/All-Hands-AI/OpenHands) and [SWE-agent](https://github.com/SWE-agent/SWE-agent).
+🌐 Community
+Join the ozManus community on Discord or Feishu to:
 
-We also thank stepfun(阶跃星辰) for supporting our Hugging Face demo space.
+💬 Ask questions
 
-OpenManus is built by contributors from MetaGPT. Huge thanks to this agent community!
+🧠 Share ideas
 
-## Cite
-```bibtex
-@misc{openmanus2025,
-  author = {Xinbin Liang and Jinyu Xiang and Zhaoyang Yu and Jiayi Zhang and Sirui Hong},
-  title = {OpenManus: An open-source framework for building general AI agents},
-  year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/mannaandpoem/OpenManus}},
-}
-```
+⚒️ Collaborate on new features
+
+🧪 Explore ozManus-RL
+
+📜 License
+ozManus is licensed under the MIT License.
+
